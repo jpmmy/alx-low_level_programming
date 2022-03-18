@@ -18,7 +18,7 @@ int main(void)
 	w = 'a';
 	b = '0';
 	a = 0;
-	while (a <= 16)
+	while (a < 16)
 	{
 		if (a < 10)
 		{
@@ -26,7 +26,7 @@ int main(void)
 		b = b + 1;
 		a = a + 1;
 		}
-		else if (a >= 10 && a <= 16)
+		else if (a >= 10 && a < 16)
 		{
 		putchar(w);
 		w = w + 1;
