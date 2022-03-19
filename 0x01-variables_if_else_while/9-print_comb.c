@@ -19,17 +19,16 @@ int main(void)
 	j = '0';
 	k = ',';
 	l = ' ';
-
- for (i = 0; i < 10; i++) 
- {
-	    putchar(j);
-	       if (i < 9)
-	       {
-		       putchar(k);
-		       putchar(l);
-	       }
-	      j = j + 1;
- }
- putchar('\n');
- return 0;
+	for (i = 0; i < 10; i++)
+	{
+	putchar(j);
+		if (i < 9)
+		{
+			putchar(k);
+			putchar(l);
+		}
+	       j = j + 1;
+	}
+	putchar('\n');
+	return (0);
 }
