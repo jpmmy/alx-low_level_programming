@@ -9,6 +9,7 @@
 int main(void)
 {
 	int leng;
+	int i;
 	char txt[] = "_putchar";
 
 	leng = sizeof(txt) / sizeof(txt[0]);
