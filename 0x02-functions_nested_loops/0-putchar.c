@@ -13,7 +13,7 @@ int main(void)
 	char txt[] = "_putchar";
 
 	leng = sizeof(txt) / sizeof(txt[0]);
-	for (int i = 0; i < leng; i++)
+	for (; i < leng; i++)
 	{
 		if (txt[i] != '\0')
 		{
