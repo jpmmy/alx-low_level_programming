@@ -13,15 +13,16 @@ int _islower(int c)
 	int j = 'a';
 	int x;
 
-	for (; i <= 'Z'; i++)
+	x = 0;
+	for (; i <= 'Z' && c != i ; i++)
 	{
-	if (c != i && c == j)
+	if (c == j)
 	{
 		x = 1;
-	} else if (c == i)
+		break;
+	} else
 	{
 		x = 0;
-		break;
 	}
 	j++;
 	}
