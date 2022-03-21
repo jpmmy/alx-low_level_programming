@@ -1,0 +1,25 @@
+#include"main.h"
+/**
+ * print_alphabet_x10 - prints alphabet
+ *
+ * prints alphabet 10x
+ *
+ * Return: return void
+ */
+void print_alphabet_x10(void)
+{
+	int a = 'a';
+	int j = 'a';
+
+	for (; a <= 'z';)
+	{
+		for (; j <= 'z' ;)
+		{
+		_putchar(j);
+		j++;
+		}
+		j = 'a';
+		a++;
+		_putchar('\n');
+	}
+}
