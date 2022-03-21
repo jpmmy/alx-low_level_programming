@@ -20,9 +20,6 @@ int _islower(int c)
 	{
 		x = 1;
 		break;
-	} else
-	{
-		x = 0;
 	}
 	j++;
 	}
