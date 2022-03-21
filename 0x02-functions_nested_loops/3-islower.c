@@ -10,19 +10,20 @@
 int _islower(int c)
 {
 	int i = 'A';
+	int j = 'a';
 	int x;
 
-	x = 0;
-	for (; i <= 'Z' ; i++)
+	for (; i <= 'Z'; i++)
 	{
-	if (c != i)
+	if (c != i && c == j)
 	{
 		x = 1;
-	} else
+	} else if (c == i)
 	{
 		x = 0;
 		break;
 	}
+	j++;
 	}
 	return (x);
 }
