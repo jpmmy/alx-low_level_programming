@@ -1,12 +1,12 @@
 #include"main.h"
 /**
- * main - entry point
+ * print_alphabet - prints alphabet
  *
  * prints alphabet
  *
- * Return: return 0
+ * Return: return void
  */
-int main(void)
+void print_alphabet(void)
 {
 	int a = 'a';
 
@@ -16,5 +16,4 @@ int main(void)
 		a++;
 	}
 	_putchar('\n');
-	return (0);
 }
