@@ -85,12 +85,10 @@ int _mo9(int num1)
 		f = num1 / 10;
 		_putchar('0' + f);
 		_putchar('0' + l);
-		_putchar('$');
 	}
 	else
 	{
 		_putchar('0' + num1);
-		_putchar('$');
 	}
 return (0);
 }
