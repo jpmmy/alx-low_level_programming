@@ -14,3 +14,4 @@ int _3f(int,int);
 void times_table(void);
 int _mo9(int num1);
 int add(int, int);
+void print_to_98(int n);
