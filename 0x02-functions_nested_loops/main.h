@@ -12,5 +12,5 @@ int _1f(int,int);
 int _2f(int,int);
 int _3f(int,int);
 void times_table(void);
-int _mo10(int num1);
 int _mo9(int num1);
+
