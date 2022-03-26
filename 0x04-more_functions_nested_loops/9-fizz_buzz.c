@@ -2,19 +2,20 @@
 #include<stdio.h>
 
 /**
- * fizzbuzz - function prints fizzbuzz test
- * function prints 1 to 100 but fizz for multiple of three and 
+ * main - function prints fizzbuzz test
+ *
+ * function prints 1 to 100 but fizz for multiple of three and
  * buzz for multiple of five
- * Return : return none
+ * Return: return none
  */
 
 int main(void)
 {
 	int i;
-	int j;
+
 	for (i = 1; i <= 100; i++)
 	{
-		if ((i % 3) == 0 && !((i % 5) == 0) )
+		if ((i % 3) == 0 && !((i % 5) == 0))
 		{
 			printf(" ");
 			printf("Fizz");
@@ -22,7 +23,7 @@ int main(void)
 		else if ((i % 5) == 0 && !((i % 3) == 0))
 		{
 			printf(" ");
-			printf("Buzz"); 
+			printf("Buzz");
 		}
 		else if ((i % 3) == 0 && ((i % 5) == 0))
 		{
@@ -32,14 +33,15 @@ int main(void)
 		{
 			if (i == 1)
 			{
-				printf("%d",i);
+				printf("%d", i);
 			}
 			else
 			{
 				printf(" ");
-				printf("%d",i);
+				printf("%d", i);
 			}
 		}
 	}
 	printf("\n");
+	return (0);
 }
