@@ -6,9 +6,9 @@
  * @s:string to be measured
  * Return: the length of the string
  */
-int l;
 int _strlen_recursion(char *s)
 {
+	int l = 0;
 
 	if (*s != '\0')
 	{
