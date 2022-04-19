@@ -7,22 +7,24 @@
  */
 int is_palindrome(char *s)
 {
-	return (is_p(s ,0,_strlen(s)-1));
+	return (is_p(s, 0, _strlen(s) - 1));
 }
 /**
  * is_p - helper function to check a palindrome string
  * @s:string to be checked
+ * @lin:param left index
+ * @rin:param right index
  * Return:1 if the sring is palindrome or 0 if not
  */
-int is_p(char *s ,int lin, int rin)
+int is_p(char *s, int lin, int rin)
 {
-	if(lin >= rin)
+	if (lin >= rin)
 	{
 		return (1);
 	}
-	if(s[lin] == s[rin])
+	if (s[lin] == s[rin])
 	{
-		return (is_p(s, lin +1, rin - 1));
+		return (is_p(s, lin + 1, rin - 1));
 	}
 	else
 	{
