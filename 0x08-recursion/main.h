@@ -13,4 +13,6 @@ int is_prime(int n,int i);
 int is_palindrome(char *s);
 int is_p(char *s ,int lin, int rin);
 int _strlen(char *s);
+int wildcmp(char *s1, char *s2);
+int is_same(char *s1, char *s2, int lin);
 #endif
