@@ -10,9 +10,8 @@
 
 int main(int argc, char *argv[])
 {
-	int i, prod;
+	int prod, num1, num2;
 
-	i = 1;
 	prod = 1;
 	if (argc <= 1)
 	{
@@ -21,11 +20,9 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		while (i < argc)
-		{
-		prod = prod * atoi(argv[i]);
-		i++;
-		}
+		num1 = atoi(argv[1]);
+		num2 = atoi(argv[2]);
+		prod = num1 * num2;
 		printf("%d\n", prod);
 		return (0);
 	}
