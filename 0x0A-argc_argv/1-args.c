@@ -9,6 +9,13 @@
 
 int main(int argc, __attribute__((unused)) char *argv[])
 {
-	printf("%d\n", argc);
+	if (argc <= 1)
+	{
+		printf("%d\n", 0);
+	}
+	else
+	{
+		printf("%d\n", argc);
+	}
 	return (0);
 }
