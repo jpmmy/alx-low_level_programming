@@ -9,31 +9,25 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	int l, i;
+	int l, i, g, h, res;
 
 	i = 0;
 	l = _strlen_recursion(s1);
-	if (s1[i] == s2[i])
+	while (s1[i] == s2[i] && i < l)
 	{
-		while (i < l)
+		if (i < l)
 		{
 			i++;
 		}
-		return (0);
-	}
-	else
-	{
-
-		if (s1[i] > s2[i])
-		{
-			return (1);
-		}
 		else
 		{
-			return (-1);
+		return (0);
 		}
-
 	}
+		g = s1[i];
+		h = s2[i];
+		res = g - h;
+		return (res);
 }
 /**
  * _strlen_recursion - a function that return the length of a string
