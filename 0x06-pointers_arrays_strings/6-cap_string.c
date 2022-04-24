@@ -1,4 +1,5 @@
 #include"main.h"
+#include<stdio.h>
 
 /**
  * cap_string- a function that
@@ -10,7 +11,7 @@
 char *cap_string(char *s)
 {
 
-	int i, l;
+	int i, l, j;
 
 	i = 0;
 	l = _strlen_recursion(s);
@@ -18,8 +19,21 @@ char *cap_string(char *s)
 	{
 		if (word_s(s[i]))
 		{
-			if (s[i] <= 'z' && s[i] >= 'a')
+			if (s[i] <= 'z' && s[i] >= 'a' && j == 1)
+			{
+				printf("s[%d] bef %c\n",i ,s[i]);
 				s[i] = s[i] - 32;
+				printf("s[%d] aft %c\n",i ,s[i]);
+				j = 0;
+			}
+			else
+			{
+				j = 0;
+			}
+		}
+		else
+		{
+			j = 1;
 		}
 		i++;
 	}
@@ -34,7 +48,7 @@ char *cap_string(char *s)
  */
 int word_s(char s)
 {
-switch (s)
+switch(s)
 {
 case ',':
 	return (0);
@@ -55,6 +69,12 @@ case ')':
 case '{':
 	return (0);
 case '}':
+	return (0);
+case ' ':
+	return (0);
+case '\t':
+	return (0);
+case '\n':
 	return (0);
 default:
 	return (1);
