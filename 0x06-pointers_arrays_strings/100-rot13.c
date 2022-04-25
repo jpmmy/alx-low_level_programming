@@ -9,25 +9,19 @@
 char *rot13(char *s)
 {
 int i, j;
-char cp;
+char fr[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+char ch[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 for (i = 0; s[i] != '\0'; i++)
 {
-	cp = s[i];
-	j = 0;
-	for (; j < 1 && (s[i] >= 'A' && s[i] <= 'z');)
+	for (j = 0; fr[j] != '\0'; j++)
 	{
-		if ((cp > 'm' && cp <= 'z') || (cp > 'M' && cp <= 'Z'))
+		if (s[i] == fr[j])
 		{
-			cp = cp - 13;
+			s[i] = ch[j];
+			break;
 		}
-		else
-		{
-			cp = cp + 13;
-		}
-		j = 1;
 	}
-	s[i] = cp;
 }
 return (s);
 }
