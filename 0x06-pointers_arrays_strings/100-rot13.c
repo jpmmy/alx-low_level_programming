@@ -15,20 +15,19 @@ for (i = 0; s[i] != '\0'; i++)
 {
 	cp = s[i];
 	j = 0;
-while (j < 1 && ((s[i] >= 'a' && s[i] <= 'z') || (s[i] >= 'A' && s[i] <= 'Z')))
+	while (j < 1 && (s[i] >= 'A' && s[i] <= 'z'))
 	{
 		if ((cp > 'm' && cp <= 'z') || (cp > 'M' && cp <= 'Z'))
-			{
-				cp = cp - 13;
-			}
-			else
-			{
-				cp = cp + 13;
-			}
-	j = 3;
+		{
+			cp = cp - 13;
+		}
+		else
+		{
+			cp = cp + 13;
+		}
+		j = 3;
 	}
-		s[i] = cp;
+	s[i] = cp;
 }
-
 return (s);
 }
