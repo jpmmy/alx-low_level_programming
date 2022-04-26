@@ -8,18 +8,20 @@
  */
 size_t print_listint(const listint_t *h)
 {
-    size_t i = 0;
+	size_t i = 0;
 
-    while(h)
-    {
-        if(h == NULL)
-            return (1);
-        else
-        {
-            printf("%d", h->n);
-            i++;
-            h = h->next;
-        }
-    }
-    return (i);
+	while (h)
+	{
+		if (h == NULL)
+		{
+			return (1);
+		}
+		else
+		{
+			printf("%d\n", h->n);
+			i++;
+			h = h->next;
+		}
+	}
+	return (i);
 }
