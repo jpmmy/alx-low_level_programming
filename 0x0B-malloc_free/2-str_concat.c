@@ -14,22 +14,22 @@ char *str_concat(char *s1, char *s2)
 
 	l1 = _strlen(s1);
 	l2 = _strlen(s2);
-	ret = malloc(((l1+l2)+1)*sizeof(char));
+	ret = malloc(((l1 + l2) + 1) * sizeof(char));
 	i = 0;
 	y = 0;
-	while(s1[i] != '\0')
+	while (s1[i] != '\0')
 	{
 		ret[i] = s1[i];
 		i++;
 	};
-	while(s2[y] != '\0')
+	while (s2[y] != '\0')
 	{
 		ret[i] = s2[y];
 		i++;
 		y++;
 	}
 	ret[i] = '\0';
-	return(ret);
+	return (ret);
 }
 /**
  * _strlen - function that returns the l of a string
