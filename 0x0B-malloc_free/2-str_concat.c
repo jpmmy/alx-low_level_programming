@@ -12,24 +12,51 @@ char *str_concat(char *s1, char *s2)
 	int i, y, l1, l2;
 	char *ret;
 
-	l1 = _strlen(s1);
-	l2 = _strlen(s2);
-	ret = malloc(((l1 + l2) + 1) * sizeof(char));
-	i = 0;
-	y = 0;
-	while (s1[i] != '\0')
+	if (s1 == NULL)
 	{
-		ret[i] = s1[i];
-		i++;
-	};
-	while (s2[y] != '\0')
-	{
-		ret[i] = s2[y];
-		i++;
-		y++;
+		l1 = 0;
 	}
-	ret[i] = '\0';
-	return (ret);
+	else
+	{
+		l1 = _strlen(s1); 
+	}
+	if (s2 == NULL)
+	{
+		l2 = 0;
+	}
+	else
+	{
+		l2 = _strlen(s2);
+	}
+	ret = malloc(((l1+l2)+1)*sizeof(char));
+	if (ret == NULL)
+	{
+		return(NULL);
+	}
+	else
+	{
+		i = 0;
+		y = 0;
+		if (l1 > 0)
+		{
+			while(s1[i] != '\0')
+			{
+				ret[i] = s1[i];
+				i++;
+			}
+		}
+		if (l2 > 0)
+		{
+			while(s2[y] != '\0')
+			{
+				ret[i] = s2[y];
+				i++;
+				y++;
+			}
+		}
+		ret[i] = '\0';
+		return(ret);
+	}
 }
 /**
  * _strlen - function that returns the l of a string
