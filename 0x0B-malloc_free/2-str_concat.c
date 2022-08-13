@@ -9,37 +9,27 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *a;
-	unsigned int i, l, m, size, k;
+	int i, y, l1, l2;
+	char *ret;
 
-		l = _strlen(s1);
-		m = _strlen(s2);
-		size = l + m + 1;
-		a = malloc(size * (sizeof(char)));
-		i = 0;
-		k = 0;
-		if (a == NULL)
-		{
-			return (NULL);
-		}
-		else
-		{
-			while (i <= size)
-			{
-				if (i < l)
-				{
-
-					a[i] = s1[i];
-				}
-				else
-				{
-					a[i] = s2[k];
-					k++;
-				}
-				i++;
-			}
-			return (a);
-		}
+	l1 = _strlen(s1);
+	l2 = _strlen(s2);
+	ret = malloc(((l1+l2)+1)*sizeof(char));
+	i = 0;
+	y = 0;
+	while(s1[i] != '\0')
+	{
+		ret[i] = s1[i];
+		i++;
+	};
+	while(s2[y] != '\0')
+	{
+		ret[i] = s2[y];
+		i++;
+		y++;
+	}
+	ret[i] = '\0';
+	return(ret);
 }
 /**
  * _strlen - function that returns the l of a string
