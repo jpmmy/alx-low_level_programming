@@ -15,7 +15,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (s1 == NULL)
 	{
-		l1 = 0;
 		s1 = "";
 	}
 	else
@@ -24,21 +23,15 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	if (s2 == NULL)
 	{
-		l2 = 0;
 		s2 = "";
 	}
 	else
 	{
 		l2 = _strlen(s2);
 	}
-	if (n >= l2)
-	{
-		ret = malloc(sizeof(char) * ((l1 + l2) + 1));
-	}
-	else
-	{
-		ret = malloc(sizeof(char) * ((l1 + n) + 1));
-	}
+	if (n > l2)
+		n = l2;
+	ret = malloc(sizeof(char) * ((l1 + n) + 1));
 	helper_conc(ret, s1, s2, n);
 	return (ret);
 }
