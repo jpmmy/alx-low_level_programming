@@ -9,20 +9,17 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	unsigned int i;
-	void *ret;
-	char *membarr;
+	char *ret;
 
-	if ((nmemb || size) == 0)
+	if (nmemb == 0 || size == 0)
 		return (NULL);
 	i = 0;
 	ret = malloc(size * nmemb);
 	if (ret == NULL)
 		return (NULL);
-	membarr = ret;
-	while (i <= nmemb)
+	for (i = 0; i <= nmemb * size; i++)
 	{
-		membarr[i] = 0;
-		i++;
+		ret[i] = 0;
 	}
-	return (membarr);
+	return (ret);
 }
