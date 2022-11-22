@@ -1,4 +1,4 @@
-#include "dog.h"
+#include "main.h"
 /**
  * init_dog - a function that initialises a struct dog
  * @d: struct dog
@@ -6,6 +6,7 @@
  * @age: age member for struct dog
  * @owner: owner member for struct dog)
  */
+
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
 	d->name = name;
