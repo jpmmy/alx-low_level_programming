@@ -28,8 +28,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 	k = i;
 	t->name = malloc(sizeof(dog_t) * (k + 1));
 	if (t->name == NULL)
+	{
 		free(t->name);
 		return (NULL);
+	}
 	t->age = age;
 	t->owner = malloc(sizeof(dog_t) * (j + 1));
 	if (t->owner == NULL)
